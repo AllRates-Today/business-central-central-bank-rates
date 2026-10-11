@@ -39,7 +39,7 @@ page 50100 "ART CB Rate Setup Card"
                 {
                     ApplicationArea = All;
                     Caption = 'API Key';
-                    ToolTip = 'Specifies the AllRatesToday API key (free key: https://allratestoday.com/signup/). Stored in Isolated Storage and never shown again. Leave empty to use the keyless evaluation copy.';
+                    ToolTip = 'Specifies the AllRatesToday API key (free key: https://allratestoday.com/register/). Stored in Isolated Storage and never shown again. Leave empty to use the keyless evaluation copy.';
                     ExtendedDatatype = Masked;
 
                     trigger OnValidate()

@@ -131,7 +131,7 @@ codeunit 50100 "ART CB Rate Import"
         Headers.Add('Accept', 'application/json');
         Headers.Add('User-Agent', UserAgentLbl);
         if ApiKey <> '' then
-            Headers.Add('X-API-Key', ApiKey);
+            Headers.Add('Authorization', 'Bearer ' + ApiKey);
 
         if not Client.Get(Url, Response) then
             Error(ConnectionErr);

@@ -44,7 +44,7 @@ code business-central-central-bank-rates
 
 ## ⚙️ Setup
 
-1. Get a free API key at [allratestoday.com/signup](https://allratestoday.com/signup/). Latest tables are available on every plan; the Official Rates Business plan is on the [pricing page](https://allratestoday.com/pricing/#official).
+1. Get a free API key at [allratestoday.com/signup](https://allratestoday.com/register/). Latest tables are available on every plan; the Official Rates Business plan is on the [pricing page](https://allratestoday.com/pricing/#official).
 2. Search for **Central Bank Rates Setup (AllRatesToday)**.
 3. Enter the **Bank Code** — `ecb`, `boe`, `rbi`, `hmrc`, … — from the [coverage map](https://allratestoday.com/central-bank-rates-api/).
 4. Paste the key into **API Key**. It is written to Isolated Storage and the field clears; **API Key Stored** turns on.
@@ -52,11 +52,11 @@ code business-central-central-bank-rates
 6. Make sure every currency you want is in **Currencies**. Rows for other currencies are skipped and counted.
 7. Choose **Import Rates Now**. The message shows the rate date and the imported/skipped counts; open **Currency Exchange Rates** to see one new line per currency dated with the bank's `rate_date`.
 
-The call the extension makes, for reference (the key goes in the `X-API-Key` header):
+The call the extension makes, for reference (the key goes in the `Authorization: Bearer` header):
 
 ```http
 GET https://allratestoday.com/api/v1/central-bank/ecb/latest
-X-API-Key: art_live_your_key
+Authorization: Bearer art_live_your_key
 Accept: application/json
 ```
 
@@ -115,7 +115,7 @@ Use this extension instead when you want:
 | | Built-in service | This extension |
 |---|---|---|
 | Install | none | AL extension |
-| Key location | on the URL (`?api_key=`) | `X-API-Key` header, Isolated Storage |
+| Key location | on the URL (`?api_key=`) | `Authorization: Bearer` header, Isolated Storage |
 | Direction | chosen once in the mapping | resolved per row against LCY Code |
 | Currencies not set up | mapping error / manual | skipped and counted |
 | Rate type choice | filter in XPath or none | **Rate Type Filter** field |
