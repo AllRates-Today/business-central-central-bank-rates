@@ -1,0 +1,25 @@
+{
+  "id": "42091f8d-edcf-48eb-af44-a1b5ae9bc5ba",
+  "name": "Central Bank Exchange Rates (AllRatesToday)",
+  "publisher": "AllRatesToday",
+  "version": "1.0.0.0",
+  "brief": "Imports official central-bank exchange rates from the AllRatesToday API into Currency Exchange Rates.",
+  "description": "Fetches the latest published table of one of 121 central banks (or 3 tax authorities) from the AllRatesToday Central Bank Exchange Rate API and writes it to the Currency Exchange Rate table, handling both quoting directions against the company's LCY code. Runs on demand or from the Job Queue.",
+  "help": "https://allratestoday.com/docs/integrations/business-central/",
+  "url": "https://allratestoday.com/central-bank-rates-api/",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "23.0.0.0",
+  "runtime": "12.0",
+  "target": "Cloud",
+  "idRanges": [
+    { "from": 50100, "to": 50149 }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "features": [ "NoImplicitWith" ]
+}
