@@ -136,6 +136,8 @@ Examples: `ecb` European Central Bank (EUR) · `boe` Bank of England (GBP) · `f
 
 The same official tables are exposed through a hosted, keyless [Model Context Protocol](https://modelcontextprotocol.io) endpoint at **`https://allratestoday.com/api/mcp`** (Streamable HTTP). Point Claude Desktop, Cursor, or any MCP client at it to look up a bank's published rate, compare publishers or list the covered banks while you work on this extension — for example to check which direction a bank quotes before choosing it in Setup.
 
+Agents that need dated tables or history beyond the keyless endpoint can self-issue a trial key: `POST https://allratestoday.com/api/agent/keys` (send `Content-Type: application/json`) returns a 100-call key valid 7 days, no account needed; the MCP servers expose the same as `request_trial_key`.
+
 ## 📜 License
 
 [MIT](LICENSE) © 2026 AllRatesToday.
