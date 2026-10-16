@@ -44,7 +44,7 @@ code business-central-central-bank-rates
 
 ## ⚙️ Setup
 
-1. Get a free API key at [allratestoday.com/signup](https://allratestoday.com/register/). Latest tables are available on every plan; the Official Rates Business plan is on the [pricing page](https://allratestoday.com/pricing/#official).
+1. Get a free API key at [allratestoday.com/register](https://allratestoday.com/register/). Latest tables are available on every plan; the Official Rates Business plan is on the [pricing page](https://allratestoday.com/pricing/#official).
 2. Search for **Central Bank Rates Setup (AllRatesToday)**.
 3. Enter the **Bank Code** — `ecb`, `boe`, `rbi`, `hmrc`, … — from the [coverage map](https://allratestoday.com/central-bank-rates-api/).
 4. Paste the key into **API Key**. It is written to Isolated Storage and the field clears; **API Key Stored** turns on.
