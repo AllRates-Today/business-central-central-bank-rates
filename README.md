@@ -13,7 +13,7 @@
 
 ## 🚀 What it does
 
-- 🏛️ **Official published rates** — one `GET /api/v1/central-bank/{bank}/latest` call per run, written to the *Currency Exchange Rate* table with `Starting Date = rate_date` (the publication date the bank states, not the run date).
+- 🏛️ **Official rates** — one `GET /api/v1/central-bank/{bank}/latest` call per run, written to the *Currency Exchange Rate* table with `Starting Date = rate_date` (the publication date the bank states, not the run date).
 - 🧭 **Both quoting directions** — each row is matched against *General Ledger Setup → LCY Code*, so ECB-style tables (foreign per 1 home) and RBI-style tables (home per 1 foreign) both land in the right fields.
 - 🧮 **Only currencies you use** — rows whose currency is not in the *Currencies* list are skipped and counted, never auto-created.
 - 🔁 **Scheduled or on demand** — codeunit `OnRun` is a Job Queue entry point; the setup page has *Import Rates Now* and *Create Job Queue Entry* actions.
@@ -126,7 +126,7 @@ If the built-in service covers your case, use it; it is the simpler path.
 
 ## 🏛️ Sources
 
-The API covers **121 central banks and 3 tax authorities** (HMRC, the Swiss BAZG and the US Treasury). Each source is served under its own code from the bank's own publication, with the publisher's `rate_date`, `cadence` and `stale` flag on every response. Codes, home currencies, quoting directions and publication schedules are on the coverage map:
+The API covers **130+ central banks and tax authorities** (HMRC, the Swiss BAZG and the US Treasury). Each source is served under its own code from the bank's own publication, with the publisher's `rate_date`, `cadence` and `stale` flag on every response. Codes, home currencies, quoting directions and publication schedules are on the coverage map:
 
 **[allratestoday.com/central-bank-rates-api](https://allratestoday.com/central-bank-rates-api/)**
 

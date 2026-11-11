@@ -4,7 +4,7 @@
   "publisher": "AllRatesToday",
   "version": "1.0.0.0",
   "brief": "Imports official central-bank exchange rates from the AllRatesToday API into Currency Exchange Rates.",
-  "description": "Fetches the latest published table of one of 121 central banks (or 3 tax authorities) from the AllRatesToday Central Bank Exchange Rate API and writes it to the Currency Exchange Rate table, handling both quoting directions against the company's LCY code. Runs on demand or from the Job Queue.",
+  "description": "Fetches the latest official table of one of 130+ central banks and tax authorities from the AllRatesToday Central Bank Exchange Rate API and writes it to the Currency Exchange Rate table, handling both quoting directions against the company's LCY code. Runs on demand or from the Job Queue.",
   "help": "https://allratestoday.com/docs/integrations/business-central/",
   "url": "https://allratestoday.com/central-bank-rates-api/",
   "dependencies": [],
